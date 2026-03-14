@@ -1,40 +1,49 @@
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Public Script Hub</title>
+<title>Galaxy Script Hub</title>
 
 <style>
+
 body{
   margin:0;
   padding:20px;
-  background:#0b0b0b;
-  color:#eaeaea;
   font-family:monospace;
+  color:white;
+
+  /* Galaxy background */
+  background: radial-gradient(circle at 20% 30%, #3a0ca3, transparent),
+              radial-gradient(circle at 80% 70%, #7209b7, transparent),
+              radial-gradient(circle at 50% 50%, #4361ee, #000);
 }
 
 h1{
   text-align:center;
+  font-size:28px;
   margin-bottom:30px;
+  text-shadow:0 0 10px #9d4edd;
 }
 
 .script-box{
-  background:#111;
-  padding:15px;
-  border-radius:10px;
+  background:rgba(0,0,0,0.6);
+  border:1px solid #6a00f4;
+  border-radius:12px;
+  padding:20px;
   margin-bottom:20px;
+  backdrop-filter:blur(6px);
 }
 
 .script-box h2{
-  margin-top:0;
-  color:#00f2ea;
+  color:#c77dff;
 }
 
 pre{
-  background:#0a0a0a;
-  padding:12px;
-  border-radius:6px;
+  background:#050505;
+  padding:15px;
+  border-radius:8px;
   overflow-x:auto;
   font-size:13px;
 }
@@ -43,16 +52,20 @@ button{
   margin-top:10px;
   padding:10px;
   width:100%;
-  background:#00f2ea;
-  color:#000;
   border:none;
-  border-radius:6px;
+  border-radius:8px;
   font-weight:bold;
   cursor:pointer;
+
+  background:linear-gradient(90deg,#7209b7,#4361ee);
+  color:white;
+
+  transition:0.3s;
 }
 
 button:hover{
-  background:#00c9c2;
+  transform:scale(1.03);
+  box-shadow:0 0 12px #9d4edd;
 }
 
 .social{
@@ -62,69 +75,81 @@ button:hover{
 .social a{
   display:block;
   text-decoration:none;
-  background:#111;
+  background:rgba(0,0,0,0.6);
   padding:10px;
   margin-top:8px;
-  border-radius:6px;
-  color:#eaeaea;
+  border-radius:8px;
+  color:white;
   text-align:center;
+  border:1px solid #7209b7;
 }
 
 .social a:hover{
-  background:#1a1a1a;
+  background:#1a0033;
 }
 
 .note{
-  margin-top:20px;
+  margin-top:25px;
   text-align:center;
   font-size:11px;
-  color:#777;
+  color:#aaa;
 }
+
 </style>
 </head>
 
 <body>
 
-<h1>🎮 Game Scripts</h1>
+<h1>🌌 Galaxy Script Hub</h1>
 
 <div class="script-box">
-<h2>Murder Mystery 2</h2>
 
-<pre id="script1">
+<h2>🔪 Murder Mystery 2</h2>
+
+<pre id="mm2">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/renaldofficial/MurderMystery2/refs/heads/main/lua"))()
 </pre>
 
-<button onclick="copyScript('script1')">Copy Script</button>
+<button onclick="copyScript('mm2')">Copy MM2 Script</button>
+
 </div>
 
 <div class="script-box">
-<h2>Steal A Brainrot</h2>
 
-<pre id="script2">
+<h2>🧠 Steal A Brainrot</h2>
+
+<pre id="brainrot">
 loadstring(game:HttpGet("https://pastefy.app/vSM7G5Ew/raw"))()
 </pre>
 
-<button onclick="copyScript('script2')">Copy Script</button>
+<button onclick="copyScript('brainrot')">Copy Brainrot Script</button>
+
 </div>
 
 <h2>🌐 Social Media</h2>
 
 <div class="social">
-<a href="#" target="_blank">Discord</a>
-<a href="https://tiktok.com/@renaldofficialhub" target="_blank">TikTok</a>
-<a href="https://www.youtube.com/@RenaldOfficialHub" target="_blank">YouTube</a>
+<a href="#">Discord</a>
+<a href="https://tiktok.com/@renaldofficialhub">TikTok</a>
+<a href="https://www.youtube.com/@RenaldOfficialHub">YouTube</a>
 </div>
 
 <div class="note">
-Public script · For educational purposes only
+Public Script • Galaxy UI • Educational purposes only
 </div>
 
 <script>
+
 function copyScript(id){
-  const text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text);
-  alert("Script copied!");
+
+const text = document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("Script copied!");
+
 }
+
 </script>
 
 </body>
