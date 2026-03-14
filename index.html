@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Script</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #0b0b0b;
+      color: #eaeaea;
+      font-family: monospace;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-top: 25px;
+      margin-bottom: 8px;
+      color: #00f2ea;
+    }
+
+    pre {
+      background: #111;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      background: #00f2ea;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .social {
+      margin-top: 10px;
+    }
+
+    .social a {
+      display: block;
+      text-decoration: none;
+      background: #111;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 6px;
+      color: #eaeaea;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .social a:hover {
+      background: #1a1a1a;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🎮 Game Scripts</h1>
+
+<h2>Murder Mystery 2</h2>
+
+<pre id="script">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/renaldofficial/MurderMystery2/refs/heads/main/lua"))()
+</pre>
+
+<h2>Steal A Brainrot</h2>
+  
+  <pre id="script">
+loadstring(game:HttpGet("https://pastefy.app/vSM7G5Ew/raw"))()
+</pre>
+  
+<button onclick="copyScript()">Copy Script</button>
+
+<h2>🌐 Social Media</h2>
+
+<div class="social">
+  <a href="" target="_blank">Discord</a>
+  <a href="https://tiktok.com/@renaldofficialhub" target="_blank">TikTok</a>
+  <a href="https://www.youtube.com/@RenaldOfficialHub" target="_blank">YouTube</a>
+</div>
+
+<div class="note">
+  Public script · For educational purposes only
+</div>
+
+<script>
+  function copyScript() {
+    navigator.clipboard.writeText(
+      document.getElementById("script").innerText
+    );
+    alert("Script copied!");
+  }
+</script>
+
+</body>
+</html>
