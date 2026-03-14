@@ -1,43 +1,30 @@
-html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Galaxy Script Hub</title>
 
 <style>
-
 body{
   margin:0;
   padding:20px;
   font-family:monospace;
   color:white;
-
-  /* Galaxy background */
   background: radial-gradient(circle at 20% 30%, #3a0ca3, transparent),
               radial-gradient(circle at 80% 70%, #7209b7, transparent),
-              radial-gradient(circle at 50% 50%, #4361ee, #000);
+              #000;
 }
 
 h1{
   text-align:center;
-  font-size:28px;
   margin-bottom:30px;
-  text-shadow:0 0 10px #9d4edd;
 }
 
-.script-box{
+.box{
   background:rgba(0,0,0,0.6);
-  border:1px solid #6a00f4;
-  border-radius:12px;
+  border:1px solid #7209b7;
+  border-radius:10px;
   padding:20px;
   margin-bottom:20px;
-  backdrop-filter:blur(6px);
-}
-
-.script-box h2{
-  color:#c77dff;
 }
 
 pre{
@@ -45,7 +32,6 @@ pre{
   padding:15px;
   border-radius:8px;
   overflow-x:auto;
-  font-size:13px;
 }
 
 button{
@@ -56,74 +42,53 @@ button{
   border-radius:8px;
   font-weight:bold;
   cursor:pointer;
-
   background:linear-gradient(90deg,#7209b7,#4361ee);
   color:white;
-
-  transition:0.3s;
 }
 
 button:hover{
-  transform:scale(1.03);
-  box-shadow:0 0 12px #9d4edd;
-}
-
-.social{
-  margin-top:30px;
+  box-shadow:0 0 10px #9d4edd;
 }
 
 .social a{
   display:block;
   text-decoration:none;
-  background:rgba(0,0,0,0.6);
   padding:10px;
   margin-top:8px;
   border-radius:8px;
-  color:white;
   text-align:center;
-  border:1px solid #7209b7;
-}
-
-.social a:hover{
-  background:#1a0033;
+  background:#111;
+  color:white;
 }
 
 .note{
-  margin-top:25px;
+  margin-top:20px;
   text-align:center;
-  font-size:11px;
+  font-size:12px;
   color:#aaa;
 }
-
 </style>
+
 </head>
 
 <body>
 
 <h1>🌌 Galaxy Script Hub</h1>
 
-<div class="script-box">
-
+<div class="box">
 <h2>🔪 Murder Mystery 2</h2>
 
-<pre id="mm2">
-loadstring(game:HttpGet("https://raw.githubusercontent.com/renaldofficial/MurderMystery2/refs/heads/main/lua"))()
-</pre>
+<pre id="mm2">loadstring(game:HttpGet("https://raw.githubusercontent.com/GalaxyYsm/OverDriveH/refs/heads/main/lua"))()</pre>
 
-<button onclick="copyScript('mm2')">Copy MM2 Script</button>
-
+<button onclick="copyMM2()">Copy MM2 Script</button>
 </div>
 
-<div class="script-box">
-
+<div class="box">
 <h2>🧠 Steal A Brainrot</h2>
 
-<pre id="brainrot">
-loadstring(game:HttpGet("https://pastefy.app/vSM7G5Ew/raw"))()
-</pre>
+<pre id="brainrot">loadstring(game:HttpGet("https://raw.githubusercontent.com/GalaxyYsm/game/refs/heads/main/lua"))()</pre>
 
-<button onclick="copyScript('brainrot')">Copy Brainrot Script</button>
-
+<button onclick="copyBrainrot()">Copy Brainrot Script</button>
 </div>
 
 <h2>🌐 Social Media</h2>
@@ -140,14 +105,14 @@ Public Script • Galaxy UI • Educational purposes only
 
 <script>
 
-function copyScript(id){
+function copyMM2(){
+navigator.clipboard.writeText(document.getElementById("mm2").innerText);
+alert("MM2 Script Copied!");
+}
 
-const text = document.getElementById(id).innerText;
-
-navigator.clipboard.writeText(text);
-
-alert("Script copied!");
-
+function copyBrainrot(){
+navigator.clipboard.writeText(document.getElementById("brainrot").innerText);
+alert("Brainrot Script Copied!");
 }
 
 </script>
